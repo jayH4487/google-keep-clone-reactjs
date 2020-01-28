@@ -1,40 +1,59 @@
-import React, {useState} from "react"
+import React, {useState, useRef, useEffect} from "react"
 
-const FormContainer = React.forwardRef((props,ref) => {
+function FormContainer({addNote}) {
 
+    const [isFormClicked, setIsFormClicked] = useState(false)
     const [note, setNote] = useState({
         title: "",
         text: "",
         color: "white",
         id: 0
     })
+    const formRef = useRef(null)
 
-    const formOpen = props.isFormClicked ? "form-open" : ""
-    const inputStyle = props.isFormClicked ? {display: "block"} : {display: "none"}
+    const inputStyle = isFormClicked ? {display: "block"} : {display: "none"}
+
+    function handleFormClick(event) {
+        if (formRef.current.contains(event.target)) {
+            setIsFormClicked(true)
+        } else if (note.title || note.text) {
+            addNote(note)
+            setNote((prev => ( {...prev, title: "", text: ""} )))
+            setIsFormClicked(false)
+        } else {
+            setIsFormClicked(false)
+        }
+  }
 
     function handleSubmit(event) {
         event.preventDefault()
 
         if (note.title || note.text) {
-            props.addNote(note)
+            addNote(note)
+            setNote((prev => ( {...prev, title: "", text: ""} )))
+            setIsFormClicked(false)
         }
-
-        setNote((prev => ( {...prev, title: "", text: ""} )))
     }
 
     function handleChange(event) {
         const {name, value} = event.target
         setNote((prev) => ( {...prev, [name]: value} ))
     }
+
+    useEffect(() => {
+        document.body.addEventListener("click", handleFormClick)
+    
+        return () => document.body.removeEventListener("click", handleFormClick)
+    }, [note])
     
 
     return (
         <div id="form-container">
             <form
-                ref={ref}
+                ref={formRef}
                 id="form"
                 autoComplete="off"
-                className={formOpen}
+                className={isFormClicked ? "form-open" : ""}
                 onSubmit={handleSubmit}
             >
                 <input
@@ -54,13 +73,25 @@ const FormContainer = React.forwardRef((props,ref) => {
                     onChange={handleChange}
                     value={note.text}
                 /> 
-                <div id="form-buttons" style={inputStyle}>
-                    <button type="submit" id="submit-button">Submit</button> 
-                    <button type="button" id="form-close-button">Close</button> 
+                <div
+                    id="form-buttons"
+                    style={inputStyle}
+                >
+                    <button
+                        type="submit"
+                        id="submit-button"
+                    >Submit</button>
+
+                    <button
+                        type="button"
+                        id="form-close-button"
+                        onClick={() => setIsFormClicked(false)}
+                    >Close</button>
+
                 </div>  
             </form> 
         </div>
     )
-})
+}
 
 export default FormContainer

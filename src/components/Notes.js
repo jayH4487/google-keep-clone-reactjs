@@ -2,7 +2,7 @@ import React from "react"
 import Note from "./Note"
 
 function Notes(props) {
-    const displayNotes = props.notes.map((note) => <Note note={note}/>)
+    const displayNotes = props.notes.map((note) => <Note key={note.id} note={note}/>)
 
     const placeholder = props.notes.length === 0 ?
         <div id="placeholder">
