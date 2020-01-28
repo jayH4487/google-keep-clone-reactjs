@@ -39,9 +39,11 @@ function App() {
                 isFormClicked={isFormClicked}
                 addNote={addNote}
             />
-            <Notes/>
+            <Notes
+                notes={notes}
+            />
         </main>
-    );
+    )
 }
 
 export default App

@@ -37,28 +37,28 @@ const FormContainer = React.forwardRef((props,ref) => {
                 className={formOpen}
                 onSubmit={handleSubmit}
             >
-                    <input
-                        name="title"
-                        id="note-title"
-                        placeholder="Title"
-                        type="text"
-                        style={inputStyle}
-                        onChange={handleChange}
-                        value={note.title}
-                        />
-                    <input
-                        name="text"
-                        id="note-text"
-                        placeholder="Take a note..."
-                        type="text"
-                        onChange={handleChange}
-                        value={note.text}
-                    /> 
-                    <div id="form-buttons" style={inputStyle}>
-                        <button type="submit" id="submit-button">Submit</button> 
-                        <button type="button" id="form-close-button">Close</button> 
-                    </div>
-              </form> 
+                <input
+                    name="title"
+                    id="note-title"
+                    placeholder="Title"
+                    type="text"
+                    style={inputStyle}
+                    onChange={handleChange}
+                    value={note.title}
+                />
+                <input
+                    name="text"
+                    id="note-text"
+                    placeholder="Take a note..."
+                    type="text"
+                    onChange={handleChange}
+                    value={note.text}
+                /> 
+                <div id="form-buttons" style={inputStyle}>
+                    <button type="submit" id="submit-button">Submit</button> 
+                    <button type="button" id="form-close-button">Close</button> 
+                </div>  
+            </form> 
         </div>
     )
 })
