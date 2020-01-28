@@ -18,8 +18,7 @@ function FormContainer({addNote}) {
             setIsFormClicked(true)
         } else if (note.title || note.text) {
             addNote(note)
-            setNote((prev => ( {...prev, title: "", text: ""} )))
-            setIsFormClicked(false)
+            closeForm()
         } else {
             setIsFormClicked(false)
         }
@@ -30,14 +29,18 @@ function FormContainer({addNote}) {
 
         if (note.title || note.text) {
             addNote(note)
-            setNote((prev => ( {...prev, title: "", text: ""} )))
-            setIsFormClicked(false)
+            closeForm()
         }
     }
 
     function handleChange(event) {
         const {name, value} = event.target
         setNote((prev) => ( {...prev, [name]: value} ))
+    }
+
+    function closeForm() {
+        setNote((prev => ( {...prev, title: "", text: ""} )))
+        setIsFormClicked(false)
     }
 
     useEffect(() => {
@@ -85,7 +88,7 @@ function FormContainer({addNote}) {
                     <button
                         type="button"
                         id="form-close-button"
-                        onClick={() => setIsFormClicked(false)}
+                        onClick={closeForm}
                     >Close</button>
 
                 </div>  

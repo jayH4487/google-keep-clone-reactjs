@@ -1,13 +1,15 @@
-import React, {useState} from 'react'
-import Header from './components/Header'
-import FormContainer from './components/FormContainer'
-import Notes from './components/Notes'
+import React, {useState} from "react"
+import Header from "./components/Header"
+import FormContainer from "./components/FormContainer"
+import Notes from "./components/Notes"
+
 
 
 function App() {
 
     const [notes, setNotes] = useState([])
- 
+    
+
 
     function addNote(note) {
         setNotes(prev => {
@@ -20,6 +22,8 @@ function App() {
 
     return (
         <main>
+            
+
             <Header/>
             <FormContainer
                 addNote={addNote}

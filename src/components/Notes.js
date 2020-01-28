@@ -1,10 +1,23 @@
-import React from "react"
+import React, {useState} from "react"
 import Note from "./Note"
+import Modal from "./Modal"
 
-function Notes(props) {
-    const displayNotes = props.notes.map((note) => <Note key={note.id} note={note}/>)
+function Notes({notes}) {
 
-    const placeholder = props.notes.length === 0 ?
+    const [modalClass, setModalClass] = useState("")
+    const [modalNote, setModalNote] = useState({})   
+
+    const displayNotes = notes.map((note) => {
+        return (
+            <Note
+                key={note.id}
+                note={note}
+                openModal={openModal}
+            />
+        )
+    })
+
+    const placeholder = notes.length === 0 ?
         <div id="placeholder">
             <img
                 id="placeholder-logo"
@@ -15,8 +28,24 @@ function Notes(props) {
         </div>
         : null
 
+    function openModal(id) {
+        setModalClass("open-modal")
+        const [note] = notes.filter(note => note.id === id)
+        setModalNote(note)
+    }
+    
+    function closeModal() {
+        setModalClass("")
+    }
+
     return (
         <>
+            <Modal
+                modalClass={modalClass}
+                modalNote={modalNote}
+                closeModal={closeModal}
+            />
+
             <div id="notes">
                 {displayNotes}
             </div>
