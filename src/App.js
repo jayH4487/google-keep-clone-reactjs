@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import Header from "./components/Header"
 import FormContainer from "./components/FormContainer"
 import Notes from "./components/Notes"
@@ -7,20 +7,7 @@ import ColorToolTip from "./components/ColorToolTip"
 
 function App() {
 
-    const [notes, setNotes] = useState([
-        {
-            title: "title1",
-            text: "text1",
-            color: "white",
-            id: 1
-        },
-        {
-            title: "title2",
-            text: "text2",
-            color: "white",
-            id: 2
-        }
-    ])
+    const [notes, setNotes] = useState([])
     const [showColorToolTip, setShowColorToolTip] = useState(false)
     const [colorToolTipPosition, setColorToolTipPosition] = useState({})
     const [colorNoteId, setColorNoteId] = useState(0)
@@ -70,6 +57,16 @@ function App() {
         setShowColorToolTip(false)
 
     }
+
+    useEffect(() => {
+        const notesFromStorage = JSON.parse(localStorage.getItem("notes")) || []
+        setNotes(notesFromStorage)
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem("notes", JSON.stringify(notes))
+    }, [notes])
+
 
     return (
         <main>
