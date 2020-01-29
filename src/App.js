@@ -17,7 +17,13 @@ function App() {
             const noteWithId = {...note, id}
             return [...prev, noteWithId]
         })
-  }
+    }
+
+    function updateNote(amendedNote) {
+        setNotes(prev => {
+            return prev.map(note => note.id !== amendedNote.id ? note : amendedNote)
+        })
+    }
 
 
     return (
@@ -30,6 +36,7 @@ function App() {
             />
             <Notes
                 notes={notes}
+                updateNote={updateNote}
             />
         </main>
     )

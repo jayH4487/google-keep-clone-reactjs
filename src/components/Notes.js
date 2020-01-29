@@ -1,8 +1,9 @@
 import React, {useState} from "react"
 import Note from "./Note"
 import Modal from "./Modal"
+import Placeholder from "./PlaceHolder"
 
-function Notes({notes}) {
+function Notes({notes, updateNote}) {
 
     const [modalClass, setModalClass] = useState("")
     const [modalNote, setModalNote] = useState({})   
@@ -17,24 +18,20 @@ function Notes({notes}) {
         )
     })
 
-    const placeholder = notes.length === 0 ?
-        <div id="placeholder">
-            <img
-                id="placeholder-logo"
-                src="https://icon.now.sh/lightbulb_outline"
-                alt=""
-            />
-            <p id="placeholder-text">Notes you add appear here</p>
-        </div>
-        : null
 
     function openModal(id) {
         setModalClass("open-modal")
         const [note] = notes.filter(note => note.id === id)
         setModalNote(note)
     }
+
+    function handleModelNoteChange(event) {
+        const {name, value} = event.target
+        setModalNote(prev => ( {...prev, [name]: value} ))
+    }
     
     function closeModal() {
+        updateNote(modalNote)
         setModalClass("")
     }
 
@@ -44,12 +41,13 @@ function Notes({notes}) {
                 modalClass={modalClass}
                 modalNote={modalNote}
                 closeModal={closeModal}
+                handleModelNoteChange={handleModelNoteChange}
             />
 
             <div id="notes">
                 {displayNotes}
             </div>
-            {placeholder}
+            {notes.length === 0 ? <Placeholder/> : null}
         </>
     )
 }
