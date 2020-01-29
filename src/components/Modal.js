@@ -1,7 +1,7 @@
 import React from "react"
 
 function Modal({modalClass, modalNote, closeModal, handleModelNoteChange}) {
- 
+
     return (
         <div className={`modal ${modalClass}`}>
             <div className="modal-content">

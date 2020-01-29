@@ -1,6 +1,7 @@
 import React from "react"
 
-function Note({note, openModal}) {
+
+function Note({note, openModal, handleMouseOver, handleMouseOut, handleDelete}) {
 
     return (
         <>
@@ -15,14 +16,20 @@ function Note({note, openModal}) {
                     <div className="toolbar">
                         <img
                             className="toolbar-color"
-                            src="https://icon.now.sh/palette" alt=""
+                            src="https://icon.now.sh/palette"
+                            alt=""
+                            onMouseOver={(event) => handleMouseOver(event, note.id)}
+                            onMouseLeave={handleMouseOut}
                         />
                         <img
                             className="toolbar-delete"
-                            src="https://icon.now.sh/delete" alt=""
+                            src="https://icon.now.sh/delete"
+                            alt=""
+                            onClick={(event) => handleDelete(event, note.id)}
                         />
                     </div>
                 </div>
+                
             </div>
         </>
     )
