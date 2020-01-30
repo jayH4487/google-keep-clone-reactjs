@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/google-keep-clone-reactjs/static/css/main.4927a188.chunk.css",
-    "main.js": "/google-keep-clone-reactjs/static/js/main.3a04a502.chunk.js",
-    "main.js.map": "/google-keep-clone-reactjs/static/js/main.3a04a502.chunk.js.map",
+    "main.js": "/google-keep-clone-reactjs/static/js/main.5d8bc234.chunk.js",
+    "main.js.map": "/google-keep-clone-reactjs/static/js/main.5d8bc234.chunk.js.map",
     "runtime-main.js": "/google-keep-clone-reactjs/static/js/runtime-main.fa82050c.js",
     "runtime-main.js.map": "/google-keep-clone-reactjs/static/js/runtime-main.fa82050c.js.map",
     "static/js/2.53f25844.chunk.js": "/google-keep-clone-reactjs/static/js/2.53f25844.chunk.js",
     "static/js/2.53f25844.chunk.js.map": "/google-keep-clone-reactjs/static/js/2.53f25844.chunk.js.map",
     "index.html": "/google-keep-clone-reactjs/index.html",
-    "precache-manifest.e640c29f37ef8ef143c2642b8a145e79.js": "/google-keep-clone-reactjs/precache-manifest.e640c29f37ef8ef143c2642b8a145e79.js",
+    "precache-manifest.5d55f3bebcc3d95cb6fc868684f46965.js": "/google-keep-clone-reactjs/precache-manifest.5d55f3bebcc3d95cb6fc868684f46965.js",
     "service-worker.js": "/google-keep-clone-reactjs/service-worker.js",
     "static/css/main.4927a188.chunk.css.map": "/google-keep-clone-reactjs/static/css/main.4927a188.chunk.css.map",
     "static/js/2.53f25844.chunk.js.LICENSE": "/google-keep-clone-reactjs/static/js/2.53f25844.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.fa82050c.js",
     "static/js/2.53f25844.chunk.js",
     "static/css/main.4927a188.chunk.css",
-    "static/js/main.3a04a502.chunk.js"
+    "static/js/main.5d8bc234.chunk.js"
   ]
 }
