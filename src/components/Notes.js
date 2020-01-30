@@ -3,7 +3,7 @@ import Note from "./Note"
 import Modal from "./Modal"
 import Placeholder from "./PlaceHolder"
 
-function Notes({notes, updateNote, handleMouseOver, handleMouseOut, handleDelete}) {
+function Notes({notes, updateNote, handleMouseOver, handleDelete}) {
 
     const [modalClass, setModalClass] = useState("")
     const [modalNote, setModalNote] = useState({})   
@@ -15,7 +15,6 @@ function Notes({notes, updateNote, handleMouseOver, handleMouseOut, handleDelete
                 note={note}
                 openModal={openModal}
                 handleMouseOver={handleMouseOver}
-                handleMouseOut={handleMouseOut}
                 handleDelete={handleDelete}
             />
         )

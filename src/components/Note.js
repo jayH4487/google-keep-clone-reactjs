@@ -1,7 +1,7 @@
 import React from "react"
 
 
-function Note({note, openModal, handleMouseOver, handleMouseOut, handleDelete}) {
+function Note({note, openModal, handleMouseOver, handleDelete}) {
 
     return (
         <>
@@ -19,8 +19,7 @@ function Note({note, openModal, handleMouseOver, handleMouseOut, handleDelete}) 
                             src="https://icon.now.sh/palette"
                             alt=""
                             onMouseOver={(event) => handleMouseOver(event, note.id)}
-                            // onMouseLeave={handleMouseOut}
-                        />
+                            />
                         <img
                             className="toolbar-delete"
                             src="https://icon.now.sh/delete"
