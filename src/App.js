@@ -37,7 +37,7 @@ function App() {
     function handleMouseOver(event, id) {
         const noteCoords = event.target.getBoundingClientRect()
         const horizontal = noteCoords.left + window.scrollX
-        const vertical = 0 - 25
+        const vertical = 0 - 45
         setColorToolTipPosition(() => ({horizontal, vertical}))
         setColorNoteId(id)
         setShowColorToolTip(true)

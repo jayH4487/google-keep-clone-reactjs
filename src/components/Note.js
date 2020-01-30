@@ -19,7 +19,7 @@ function Note({note, openModal, handleMouseOver, handleMouseOut, handleDelete}) 
                             src="https://icon.now.sh/palette"
                             alt=""
                             onMouseOver={(event) => handleMouseOver(event, note.id)}
-                            onMouseLeave={handleMouseOut}
+                            // onMouseLeave={handleMouseOut}
                         />
                         <img
                             className="toolbar-delete"
