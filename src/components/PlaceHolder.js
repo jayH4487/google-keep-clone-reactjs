@@ -3,10 +3,9 @@ import React from "react"
 function PlaceHolder() {
     return (
         <div id="placeholder">
-            <img
+            <i
                 id="placeholder-logo"
-                src="https://icon.now.sh/lightbulb_outline"
-                alt=""
+                className="far fa-lightbulb"
             />
             <p id="placeholder-text">Notes you add appear here</p>
         </div>

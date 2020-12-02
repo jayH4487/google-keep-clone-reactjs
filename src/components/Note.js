@@ -14,16 +14,12 @@ function Note({note, openModal, handleMouseOver, handleDelete}) {
                 <div className="note-text">{note.text}</div>
                 <div className="toolbar-container">
                     <div className="toolbar">
-                        <img
-                            className="toolbar-color"
-                            src="https://icon.now.sh/palette"
-                            alt=""
+                        <i
+                            className="toolbar-color fas fa-palette"
                             onMouseOver={(event) => handleMouseOver(event, note.id)}
                             />
-                        <img
-                            className="toolbar-delete"
-                            src="https://icon.now.sh/delete"
-                            alt=""
+                        <i
+                            className="toolbar-delete fas fa-trash-alt"
                             onClick={(event) => handleDelete(event, note.id)}
                         />
                     </div>
