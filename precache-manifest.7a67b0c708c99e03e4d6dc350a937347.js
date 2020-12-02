@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a5e99e7d8d20a094141ea542c8c87418",
+    "revision": "5618c17c314ca518162968f2f6355613",
     "url": "/google-keep-clone-reactjs/index.html"
   },
   {
-    "revision": "ed04b0ad444808584657",
-    "url": "/google-keep-clone-reactjs/static/css/main.b3108589.chunk.css"
+    "revision": "4d73e033f8462fd0d160",
+    "url": "/google-keep-clone-reactjs/static/css/main.952f4336.chunk.css"
   },
   {
     "revision": "ebefc019628dd838bf8d",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/google-keep-clone-reactjs/static/js/2.53f25844.chunk.js.LICENSE"
   },
   {
-    "revision": "ed04b0ad444808584657",
-    "url": "/google-keep-clone-reactjs/static/js/main.9bb66dd9.chunk.js"
+    "revision": "4d73e033f8462fd0d160",
+    "url": "/google-keep-clone-reactjs/static/js/main.6c744fc7.chunk.js"
   },
   {
     "revision": "9a3c7d88c611d4ed8db9",
