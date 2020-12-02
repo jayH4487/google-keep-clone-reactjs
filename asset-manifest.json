@@ -5,17 +5,17 @@
     "main.js.map": "/google-keep-clone-reactjs/static/js/main.6c744fc7.chunk.js.map",
     "runtime-main.js": "/google-keep-clone-reactjs/static/js/runtime-main.fa82050c.js",
     "runtime-main.js.map": "/google-keep-clone-reactjs/static/js/runtime-main.fa82050c.js.map",
-    "static/js/2.53f25844.chunk.js": "/google-keep-clone-reactjs/static/js/2.53f25844.chunk.js",
-    "static/js/2.53f25844.chunk.js.map": "/google-keep-clone-reactjs/static/js/2.53f25844.chunk.js.map",
+    "static/js/2.bc506062.chunk.js": "/google-keep-clone-reactjs/static/js/2.bc506062.chunk.js",
+    "static/js/2.bc506062.chunk.js.map": "/google-keep-clone-reactjs/static/js/2.bc506062.chunk.js.map",
     "index.html": "/google-keep-clone-reactjs/index.html",
-    "precache-manifest.7a67b0c708c99e03e4d6dc350a937347.js": "/google-keep-clone-reactjs/precache-manifest.7a67b0c708c99e03e4d6dc350a937347.js",
+    "precache-manifest.ce6a1ebe7bee726854de8ede335862cb.js": "/google-keep-clone-reactjs/precache-manifest.ce6a1ebe7bee726854de8ede335862cb.js",
     "service-worker.js": "/google-keep-clone-reactjs/service-worker.js",
     "static/css/main.952f4336.chunk.css.map": "/google-keep-clone-reactjs/static/css/main.952f4336.chunk.css.map",
-    "static/js/2.53f25844.chunk.js.LICENSE": "/google-keep-clone-reactjs/static/js/2.53f25844.chunk.js.LICENSE"
+    "static/js/2.bc506062.chunk.js.LICENSE": "/google-keep-clone-reactjs/static/js/2.bc506062.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.fa82050c.js",
-    "static/js/2.53f25844.chunk.js",
+    "static/js/2.bc506062.chunk.js",
     "static/css/main.952f4336.chunk.css",
     "static/js/main.6c744fc7.chunk.js"
   ]
